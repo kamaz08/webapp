@@ -240,3 +240,7 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+
+#Angular kamaz
+/WebApi/WebApi.Angular/app/**/*.js
+/WebApi/WebApi.Angular/app/**/*.js.map

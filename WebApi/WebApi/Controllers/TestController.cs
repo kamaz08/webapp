@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
 using WebApi.Model;
+using WebApi.Model.Logic;
 using WebApi.Model.Model.Test;
 
 namespace WebApi.Controllers
@@ -21,12 +22,17 @@ namespace WebApi.Controllers
 
         // GET: api/Test
         [HttpGet]
-        public String GetTesthehe(int id)
+        [ResponseType(typeof(String))]
+        public async Task<IHttpActionResult> GetTesthehe(int id)
         {
-            string hahaha = "hahhahaha";
-            if(id == 0) hahaha = "no fajnie";
-            Thread.Sleep(10000);
-            return hahaha;
+            var x1 = new Mapping();
+            Test test = await db.Test.FindAsync(id);
+            if (test == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(test);
         }
 
         // GET: api/Test/5

@@ -118,7 +118,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
-    <Content Include="Index.html" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Web.config" />
@@ -146,9 +145,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\WebApi.Angular\WebApi.Angular.csproj">
+      <Project>{e61f1c7c-9e40-4070-8c9b-92d7262676c0}</Project>
+      <Name>WebApi.Angular</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WebApi.Model\WebApi.Model.csproj">
       <Project>{41c408c2-2da4-4bf8-8b52-ada3152d7e49}</Project>
       <Name>WebApi.Model</Name>
