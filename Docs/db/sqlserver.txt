@@ -1,0 +1,3 @@
+Login by SQL Server authentication
+-add new user
+-Properties/Secure - change authentication  
